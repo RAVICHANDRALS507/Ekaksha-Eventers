@@ -1,35 +1,40 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import React, { StrictMode } from 'react'
+import { createRoot } from 'react-dom/client'
+import Header from "./components/Header.jsx";
+// import EventList from "./components/EventList.jsx";
+import Footer from "./components/Footer.jsx";
+import "./App.css";
+import Home from './components/Home.jsx';
+import About from './components/About.jsx';
+import Services from './components/Services.jsx';
+import Galary from './components/Galary.jsx';
+import Customers from './components/Customers.jsx';
+import Founder from './components/Founder.jsx';
+import Contact from './components/Contact.jsx';
+import ChatBot from './components/ChatBot.jsx';
 
-function App() {
-  const [count, setCount] = useState(0)
-
+const App = () => {
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
-}
+    <div>
+      <Header />
+      <Home />
+      <About />
+      <Services />
+      <Galary />
+      <Customers />
+      <Founder />
+      <Contact />
+      <ChatBot />
+      {/* <EventList />*/}
+      <Footer /> 
+    </div>
+  );
+};
 
-export default App
+export default App;
+
+// createRoot(document.getElementById('root')).render(
+//   <StrictMode>
+//     <App />
+//   </StrictMode>,
+// )
