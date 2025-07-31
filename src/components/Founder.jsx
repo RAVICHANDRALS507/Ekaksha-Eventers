@@ -1,14 +1,15 @@
 import React from "react";
-
+import SusheelProfile from "../assets/Susheel_Profile.png";
 export default function Founder() {
   return (
     <section id="founder" className="w-full bg-gradient-to-r from-purple-100 to-blue-100 py-16 px-0">
       <div className="max-w-3xl mx-auto px-4 flex flex-col items-center text-center">
         <img
-          src="https://randomuser.me/api/portraits/men/75.jpg" // Replace with actual founder image if available
-          alt="Founder of Ekaksha Eventers"
-          className="w-40 h-40 rounded-full object-cover border-4 border-blue-500 shadow-lg mb-6"
-        />
+  src={SusheelProfile}
+  alt="Founder of Ekaksha Eventers"
+  className="w-40 h-40 rounded-full object-cover object-top transform scale-125 border-4 border-blue-500 shadow-lg mb-6"
+/>
+
         <h2 className="text-3xl md:text-4xl font-bold text-blue-700 mb-2">Susheel Naidu</h2>
         <h3 className="text-lg text-blue-500 mb-4 font-semibold">Founder & CEO, Ekaksha Eventers</h3>
         <p className="text-gray-700 text-lg mb-4">
