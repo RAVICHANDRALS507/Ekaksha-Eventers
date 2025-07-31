@@ -1,40 +1,32 @@
-import React, { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
-import Header from "./components/Header.jsx";
-// import EventList from "./components/EventList.jsx";
-import Footer from "./components/Footer.jsx";
-import "./App.css";
-import Home from './components/Home.jsx';
-import About from './components/About.jsx';
-import Services from './components/Services.jsx';
-import Galary from './components/Galary.jsx';
-import Customers from './components/Customers.jsx';
-import Founder from './components/Founder.jsx';
-import Contact from './components/Contact.jsx';
-import ChatBot from './components/ChatBot.jsx';
+import React from 'react';
+import HeroSection from './components/HeroSection';
+import OurExperience from './components/OurExperience';
+import AboutSection from './components/AboutSection';
+import ServicesSection from './components/ServicesSection';
+import ContactSection from './components/ContactSection';
+import Footer from './components/Footer';
+import Founder from './components/Founder';
+import Customers from './components/Customers';
+import FAQ from './components/FAQ';
+import ChatBot from './components/ChatBot';
+import NammaNavbar from './components/Navbar';
 
 const App = () => {
   return (
     <div>
-      <Header />
-      <Home />
-      <About />
-      <Services />
-      <Galary />
+      <NammaNavbar />
+      <HeroSection />
+      <OurExperience />
+      <AboutSection />
+      <ServicesSection />
       <Customers />
       <Founder />
-      <Contact />
+      <FAQ />
       <ChatBot />
-      {/* <EventList />*/}
-      <Footer /> 
+      <ContactSection />
+      <Footer />
     </div>
   );
 };
 
 export default App;
-
-// createRoot(document.getElementById('root')).render(
-//   <StrictMode>
-//     <App />
-//   </StrictMode>,
-// )

@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function Contact() {
+export default function ContactSection() {
   return (
     <section id="contact" className="w-full bg-white py-16 px-0">
       <div className="max-w-4xl mx-auto px-4">
@@ -17,17 +17,26 @@ export default function Contact() {
               Bengaluru, Karnataka, 560001<br />
               India
             </p>
+
             <h3 className="text-lg font-semibold text-blue-800 mt-6 mb-2">Opening Hours</h3>
             <p className="text-gray-700 mb-2">
               Monday - Saturday: 9:00 AM - 7:00 PM<br />
               Sunday: Closed
             </p>
+
             <h3 className="text-lg font-semibold text-blue-800 mt-6 mb-2">Phone & Email</h3>
             <p className="text-gray-700 mb-2">
-              <span className="font-medium">Phone:</span> <a href="tel:+919876543210" className="text-blue-600 hover:underline">+91 98765 43210</a><br />
-              <span className="font-medium">Email:</span> <a href="mailto:info@ekakshaeventers.com" className="text-blue-600 hover:underline">info@ekakshaeventers.com</a>
+              <span className="font-medium">Phone:</span>{" "}
+              <a href="tel:+919876543210" className="text-blue-600 hover:underline">
+                +91 98765 43210
+              </a><br />
+              <span className="font-medium">Email:</span>{" "}
+              <a href="mailto:info@ekakshaeventers.com" className="text-blue-600 hover:underline">
+                info@ekakshaeventers.com
+              </a>
             </p>
           </div>
+
           {/* Google Map */}
           <div className="rounded-xl overflow-hidden shadow-lg h-80">
             <iframe
