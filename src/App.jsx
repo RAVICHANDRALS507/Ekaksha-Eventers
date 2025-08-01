@@ -1,4 +1,6 @@
 import React from 'react';
+import { Routes, Route } from 'react-router-dom';
+
 import HeroSection from './components/HeroSection';
 import OurExperience from './components/OurExperience';
 import AboutSection from './components/AboutSection';
@@ -10,10 +12,12 @@ import Customers from './components/Customers';
 import FAQ from './components/FAQ';
 import ChatBot from './components/ChatBot';
 import NammaNavbar from './components/Navbar';
+import Gallery from './components/Gallery'; // Make sure this exists
 
-const App = () => {
+// ✅ Home component combining all main sections
+const Home = () => {
   return (
-    <div>
+    <>
       <NammaNavbar />
       <HeroSection />
       <OurExperience />
@@ -25,6 +29,17 @@ const App = () => {
       <ChatBot />
       <ContactSection />
       <Footer />
+    </>
+  );
+};
+
+const App = () => {
+  return (
+    <div>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/gallery" element={<Gallery />} />
+      </Routes>
     </div>
   );
 };

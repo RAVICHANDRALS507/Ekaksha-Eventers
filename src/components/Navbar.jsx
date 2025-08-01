@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import { useLocation, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import Logo from "../assets/Logo.png";
 
 import {
@@ -11,6 +13,8 @@ import { HiMenuAlt3, HiX } from "react-icons/hi";
 
 const NammaNavbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const location = useLocation();
+  const navigate = useNavigate();
 
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
@@ -18,13 +22,41 @@ const NammaNavbar = () => {
 
   const closeMenu = () => setIsMobileMenuOpen(false);
 
-  // Use same menu items for desktop and mobile
-  const menuItems = ["Home", "About", "Gallery", "Contact", "Founder", "FAQ"];
+  const menuItems = [
+    { name: "Home", id: "home" },
+    { name: "About", id: "about" },
+    { name: "Gallery", path: "/gallery" },
+    { name: "Contact", id: "contact" },
+    { name: "Founder", id: "founder" },
+    { name: "FAQ", id: "faq" },
+  ];
+
+  const scrollToSection = (id) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+      closeMenu();
+    }
+  };
+
+  const handleMenuClick = (item) => {
+    if (item.path) {
+      navigate(item.path);
+    } else if (location.pathname === "/") {
+      scrollToSection(item.id);
+    } else {
+      navigate("/"); // Go to homepage, then scroll after delay
+      setTimeout(() => {
+        scrollToSection(item.id);
+      }, 300);
+    }
+    closeMenu();
+  };
 
   return (
     <nav className="fixed top-0 left-0 right-0 bg-white shadow-md px-6 md:px-12 py-4 z-50">
       <div className="flex justify-between items-center">
-        {/* Logo and Brand Name */}
+        {/* Logo */}
         <div className="flex items-center space-x-3">
           <img
             src={Logo}
@@ -38,29 +70,33 @@ const NammaNavbar = () => {
 
         {/* Desktop Nav */}
         <div className="hidden md:flex items-center space-x-8">
-          {menuItems.map((section) => (
-            <a
-              key={section}
-              href={`#${section.toLowerCase()}`}
+          {menuItems.map((item) => (
+            <button
+              key={item.name}
+              onClick={() => handleMenuClick(item)}
               className="text-namma-yellow text-lg font-medium transition duration-300 hover:text-namma-dark-yellow"
             >
-              {section}
-            </a>
+              {item.name}
+            </button>
           ))}
         </div>
 
-        {/* Social + Button */}
+        {/* Social + Mobile Menu Toggle */}
         <div className="hidden md:flex items-center space-x-6">
           <div className="flex items-center space-x-5 mr-4">
             <a
               href="https://www.facebook.com/ekaksha.eventers/"
               className="text-namma-yellow text-xl hover:text-namma-dark-yellow transition"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               <FaFacebookF />
             </a>
             <a
-              href="https://www.instagram.com/ekaksha_eventers_pvt?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+              href="https://www.instagram.com/ekaksha_eventers_pvt"
               className="text-namma-yellow text-xl hover:text-namma-dark-yellow transition"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               <FaInstagram />
             </a>
@@ -82,12 +118,9 @@ const NammaNavbar = () => {
               <span className="text-sm font-semibold">8300794075</span>
             </a>
           </div>
-          {/* <button className="bg-namma-yellow text-white px-6 py-2 rounded-full font-semibold hover:bg-namma-dark-yellow transition duration-300">
-            Book a Trip
-          </button> */}
         </div>
 
-        {/* Mobile Menu Toggle */}
+        {/* Mobile Menu Button */}
         <div className="md:hidden">
           <button onClick={toggleMobileMenu}>
             {isMobileMenuOpen ? (
@@ -99,35 +132,38 @@ const NammaNavbar = () => {
         </div>
       </div>
 
-      {/* Mobile Menu with Smooth Transition */}
+      {/* Mobile Menu */}
       <div
         className={`md:hidden overflow-hidden transition-all duration-500 ease-in-out transform ${
           isMobileMenuOpen ? "max-h-screen opacity-100 mt-4" : "max-h-0 opacity-0"
         }`}
       >
         <div className="space-y-4 px-1">
-          {menuItems.map((section) => (
-            <a
-              key={section}
-              href={`#${section.toLowerCase()}`}
-              onClick={closeMenu}
+          {menuItems.map((item) => (
+            <button
+              key={item.name}
+              onClick={() => handleMenuClick(item)}
               className="block text-namma-yellow font-medium"
             >
-              {section}
-            </a>
+              {item.name}
+            </button>
           ))}
 
-          {/* Updated social icons to match desktop (remove LinkedIn & Twitter, add phone & WhatsApp) */}
+          {/* Social Icons */}
           <div className="flex items-center space-x-6 mt-4">
             <a
               href="https://www.facebook.com/ekaksha.eventers/"
               className="text-namma-yellow text-xl hover:text-namma-dark-yellow transition"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               <FaFacebookF />
             </a>
             <a
-              href="https://www.instagram.com/ekaksha_eventers_pvt?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+              href="https://www.instagram.com/ekaksha_eventers_pvt"
               className="text-namma-yellow text-xl hover:text-namma-dark-yellow transition"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               <FaInstagram />
             </a>

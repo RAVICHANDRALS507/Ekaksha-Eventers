@@ -1,4 +1,35 @@
 import React from "react";
+import { Link } from 'react-router-dom';
+
+import img1 from "../assets/51.jpg";
+import img2 from "../assets/126.jpg";
+import img3 from "../assets/3.jpg";
+import img4 from "../assets/4.jpg";
+import img5 from "../assets/10.jpg";
+import img6 from "../assets/47.jpg";
+
+const images = [
+  { src: img1, alt: "Birthday Event" },
+  { src: img2, alt: "Birthday Banner" },
+  { src: img3, alt: "Naming Cermony" },
+  { src: img4, alt: "Birthday Party" },
+  { src: img5, alt: "Exhibition" },
+  { src: img6, alt: "Private Party" },
+];
+
+// Reusable SVG Icon
+const IconCheckCircle = ({ className }) => (
+  <svg
+    className={className}
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2"
+    viewBox="0 0 24 24"
+  >
+    <circle cx="12" cy="12" r="10" />
+    <path strokeLinecap="round" strokeLinejoin="round" d="M8 12l2 2 4-4" />
+  </svg>
+);
 
 const services = [
   {
@@ -46,16 +77,7 @@ const services = [
     description:
       "Beautifully organized naming ceremonies with themed decorations, rituals, and warm ambiance to celebrate your baby’s special day with grace and joy.",
     icon: (
-      <svg
-        className="w-10 h-10 mx-auto mb-4 text-yellow-500"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="2"
-        viewBox="0 0 24 24"
-      >
-        <circle cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="2" />
-        <path strokeLinecap="round" strokeLinejoin="round" d="M8 12l2 2 4-4" />
-      </svg>
+      <IconCheckCircle className="w-10 h-10 mx-auto mb-4 text-yellow-500" />
     ),
   },
   {
@@ -99,88 +121,30 @@ const services = [
     title: "Private Parties",
     description:
       "Exclusive private parties with elegant setups, themed décor, and personalized planning—perfect for anniversaries, proposals, or intimate celebrations with loved ones.",
-    icon: (
-      <svg
-        className="w-10 h-10 mx-auto mb-4 text-red-500"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="2"
-        viewBox="0 0 24 24"
-      >
-        <circle cx="12" cy="12" r="10" />
-        <path strokeLinecap="round" strokeLinejoin="round" d="M8 12l2 2 4-4" />
-      </svg>
-    ),
+    icon: <IconCheckCircle className="w-10 h-10 mx-auto mb-4 text-red-500" />,
   },
-
   {
-    title: "House worming",
+    title: "Housewarming",
     description:
       "Warm and traditional housewarming celebrations with customized décor, rituals, and seamless planning to bless your new beginning with joy and positivity.",
-    icon: (
-      <svg
-        className="w-10 h-10 mx-auto mb-4 text-red-500"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="2"
-        viewBox="0 0 24 24"
-      >
-        <circle cx="12" cy="12" r="10" />
-        <path strokeLinecap="round" strokeLinejoin="round" d="M8 12l2 2 4-4" />
-      </svg>
-    ),
+    icon: <IconCheckCircle className="w-10 h-10 mx-auto mb-4 text-red-500" />,
   },
   {
     title: "Love proposal",
     description:
       "Romantic love proposals crafted with personalized themes, stunning décor, and flawless planning to create unforgettable, heartfelt moments for you both.",
-    icon: (
-      <svg
-        className="w-10 h-10 mx-auto mb-4 text-red-500"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="2"
-        viewBox="0 0 24 24"
-      >
-        <circle cx="12" cy="12" r="10" />
-        <path strokeLinecap="round" strokeLinejoin="round" d="M8 12l2 2 4-4" />
-      </svg>
-    ),
+    icon: <IconCheckCircle className="w-10 h-10 mx-auto mb-4 text-red-500" />,
   },
 ];
 
-const images = [
-  {
-    src: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=600&q=80",
-    alt: "Corporate Event",
-    caption: "Corporate Annual Meet 2023",
-  },
-  {
-    src: "https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=600&q=80",
-    alt: "Wedding Event",
-    caption: "Grand Wedding Reception",
-  },
-  {
-    src: "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&w=600&q=80",
-    alt: "Concert",
-    caption: "Live Concert Night",
-  },
-  {
-    src: "https://images.unsplash.com/photo-1521737852567-6949f3f9f2b5?auto=format&fit=crop&w=600&q=80",
-    alt: "Birthday Party",
-    caption: "Themed Birthday Bash",
-  },
-  {
-    src: "https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=600&q=80",
-    alt: "Exhibition",
-    caption: "Art & Trade Exhibition",
-  },
-  {
-    src: "https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=600&q=80",
-    alt: "Private Party",
-    caption: "Private Anniversary Party",
-  },
-];
+// const images = [
+//   { src: require("./assets/1.jpg"), alt: "Corporate Event" },
+//   { src: require("./assets/2.jpg"), alt: "Wedding Event" },
+//   { src: require("./assets/3.jpg"), alt: "Concert" },
+//   { src: require("./assets/4.jpg"), alt: "Birthday Party" },
+//   { src: require("./assets/5.jpg"), alt: "Exhibition" },
+//   { src: require("./assets/6.jpg"), alt: "Private Party" },
+// ];
 
 export default function Services() {
   return (
@@ -210,6 +174,7 @@ export default function Services() {
               href="https://g.co/kgs/8rX1Nix"
               target="_blank"
               rel="noopener noreferrer"
+              aria-label="View more services on Google"
               className="inline-block bg-blue-700 text-white font-semibold px-6 py-3 rounded-full shadow hover:bg-yellow-400 hover:text-black transition duration-300"
             >
               View More
@@ -238,12 +203,22 @@ export default function Services() {
                 />
                 <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent px-4 py-3">
                   <p className="text-white text-base font-semibold drop-shadow">
-                    {img.caption}
+                    {img.alt}
                   </p>
                 </div>
                 <div className="absolute inset-0 bg-black/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </div>
             ))}
+          </div>
+          <div className="mt-10 text-center">
+            <Link
+  to="/gallery"
+  aria-label="View more services on Gallery page"
+  className="inline-block bg-blue-700 text-white font-semibold px-6 py-3 rounded-full shadow hover:bg-yellow-400 hover:text-black transition duration-300"
+>
+  View More
+</Link>
+
           </div>
         </div>
       </section>
