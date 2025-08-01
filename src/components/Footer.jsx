@@ -68,7 +68,7 @@ const Footer = () => {
             <span className="mr-1">EVENTERS</span> {/* Reduced mr-2 to mr-1 */}
           </div>
           <p className="text-xs text-gray-800 mt-2 italic">
-            "WE CREATE YOUR MEMORY BOOK"
+            "The Quality of Trust"
           </p>{" "}
           {/* Reduced text-sm to text-xs, mt-4 to mt-2 */}
         </div>
