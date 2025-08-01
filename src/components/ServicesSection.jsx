@@ -4,29 +4,55 @@ const services = [
   {
     title: "Baby shower",
     description:
-      "Professional planning and execution for conferences, seminars, product launches, and team-building activities.",
+      "Elegant baby showers with themed décor, games, and complete planning—crafted to celebrate motherhood with love, joy, and lasting memories.",
     icon: (
-      <svg className="w-10 h-10 mx-auto mb-4 text-blue-700" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" d="M9 17v-2a2 2 0 012-2h2a2 2 0 012 2v2m-6 4h6a2 2 0 002-2v-6a2 2 0 00-2-2h-6a2 2 0 00-2 2v6a2 2 0 002 2z" />
+      <svg
+        className="w-10 h-10 mx-auto mb-4 text-blue-700"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="2"
+        viewBox="0 0 24 24"
+      >
+        <path
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          d="M9 17v-2a2 2 0 012-2h2a2 2 0 012 2v2m-6 4h6a2 2 0 002-2v-6a2 2 0 00-2-2h-6a2 2 0 00-2 2v6a2 2 0 002 2z"
+        />
       </svg>
     ),
   },
   {
     title: "Weddings & Receptions",
     description:
-      "From intimate gatherings to grand celebrations, we make your special day truly memorable with flawless coordination.",
+      "Dream weddings and receptions with stunning décor, seamless coordination, and personalized themes—making your special day unforgettable, elegant, and stress-free.",
     icon: (
-      <svg className="w-10 h-10 mx-auto mb-4 text-pink-500" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" d="M12 21C12 21 4 13.5 4 8.5C4 5.42 6.42 3 9.5 3C11.24 3 12.91 3.81 14 5.08C15.09 3.81 16.76 3 18.5 3C21.58 3 24 5.42 24 8.5C24 13.5 16 21 16 21H12Z" />
+      <svg
+        className="w-10 h-10 mx-auto mb-4 text-pink-500"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="2"
+        viewBox="0 0 24 24"
+      >
+        <path
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          d="M12 21C12 21 4 13.5 4 8.5C4 5.42 6.42 3 9.5 3C11.24 3 12.91 3.81 14 5.08C15.09 3.81 16.76 3 18.5 3C21.58 3 24 5.42 24 8.5C24 13.5 16 21 16 21H12Z"
+        />
       </svg>
     ),
   },
   {
     title: "Naming ceremony",
     description:
-      "Stage setup, artist management, sound & lighting, and crowd control for unforgettable entertainment experiences.",
+      "Beautifully organized naming ceremonies with themed decorations, rituals, and warm ambiance to celebrate your baby’s special day with grace and joy.",
     icon: (
-      <svg className="w-10 h-10 mx-auto mb-4 text-yellow-500" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+      <svg
+        className="w-10 h-10 mx-auto mb-4 text-yellow-500"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="2"
+        viewBox="0 0 24 24"
+      >
         <circle cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="2" />
         <path strokeLinecap="round" strokeLinejoin="round" d="M8 12l2 2 4-4" />
       </svg>
@@ -35,19 +61,35 @@ const services = [
   {
     title: "Birthday Parties",
     description:
-      "Fun themes, décor, games, and catering for kids and adults to make birthdays extra special.",
+      "Fun-filled birthday parties with creative themes, vibrant décor, games, and entertainment—designed to make every celebration joyful and unforgettable.",
     icon: (
-      <svg className="w-10 h-10 mx-auto mb-4 text-purple-500" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+      <svg
+        className="w-10 h-10 mx-auto mb-4 text-purple-500"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="2"
+        viewBox="0 0 24 24"
+      >
+        <path
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
+        />
       </svg>
     ),
   },
   {
     title: "Exhibitions & Trade Shows",
     description:
-      "End-to-end management for expos, stalls, branding, logistics, and visitor engagement.",
+      "Professional execution of exhibitions and trade shows with creative stalls, branding, logistics, and audience engagement for impactful business presence and promotion.",
     icon: (
-      <svg className="w-10 h-10 mx-auto mb-4 text-green-500" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+      <svg
+        className="w-10 h-10 mx-auto mb-4 text-green-500"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="2"
+        viewBox="0 0 24 24"
+      >
         <rect width="20" height="14" x="2" y="5" rx="2" />
         <path strokeLinecap="round" strokeLinejoin="round" d="M2 10h20" />
       </svg>
@@ -56,21 +98,33 @@ const services = [
   {
     title: "Private Parties",
     description:
-      "Personalized celebrations for anniversaries, engagements, and other milestones.",
+      "Exclusive private parties with elegant setups, themed décor, and personalized planning—perfect for anniversaries, proposals, or intimate celebrations with loved ones.",
     icon: (
-      <svg className="w-10 h-10 mx-auto mb-4 text-red-500" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+      <svg
+        className="w-10 h-10 mx-auto mb-4 text-red-500"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="2"
+        viewBox="0 0 24 24"
+      >
         <circle cx="12" cy="12" r="10" />
         <path strokeLinecap="round" strokeLinejoin="round" d="M8 12l2 2 4-4" />
       </svg>
     ),
   },
-  
+
   {
     title: "House worming",
     description:
-      "Personalized celebrations for anniversaries, engagements, and other milestones.",
+      "Warm and traditional housewarming celebrations with customized décor, rituals, and seamless planning to bless your new beginning with joy and positivity.",
     icon: (
-      <svg className="w-10 h-10 mx-auto mb-4 text-red-500" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+      <svg
+        className="w-10 h-10 mx-auto mb-4 text-red-500"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="2"
+        viewBox="0 0 24 24"
+      >
         <circle cx="12" cy="12" r="10" />
         <path strokeLinecap="round" strokeLinejoin="round" d="M8 12l2 2 4-4" />
       </svg>
@@ -79,15 +133,20 @@ const services = [
   {
     title: "Love proposal",
     description:
-      "Personalized celebrations for anniversaries, engagements, and other milestones.",
+      "Romantic love proposals crafted with personalized themes, stunning décor, and flawless planning to create unforgettable, heartfelt moments for you both.",
     icon: (
-      <svg className="w-10 h-10 mx-auto mb-4 text-red-500" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+      <svg
+        className="w-10 h-10 mx-auto mb-4 text-red-500"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="2"
+        viewBox="0 0 24 24"
+      >
         <circle cx="12" cy="12" r="10" />
         <path strokeLinecap="round" strokeLinejoin="round" d="M8 12l2 2 4-4" />
       </svg>
     ),
   },
-
 ];
 
 const images = [
@@ -139,10 +198,22 @@ export default function Services() {
                 className="bg-white rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 p-8 text-center border-t-4 border-blue-600 hover:border-yellow-400"
               >
                 {service.icon}
-                <h3 className="text-xl font-semibold mb-3 text-gray-800">{service.title}</h3>
+                <h3 className="text-xl font-semibold mb-3 text-gray-800">
+                  {service.title}
+                </h3>
                 <p className="text-gray-600">{service.description}</p>
               </div>
             ))}
+          </div>
+          <div className="mt-10 text-center">
+            <a
+              href="https://g.co/kgs/8rX1Nix"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block bg-blue-700 text-white font-semibold px-6 py-3 rounded-full shadow hover:bg-yellow-400 hover:text-black transition duration-300"
+            >
+              View More
+            </a>
           </div>
         </div>
       </section>
@@ -166,7 +237,9 @@ export default function Services() {
                   loading="lazy"
                 />
                 <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent px-4 py-3">
-                  <p className="text-white text-base font-semibold drop-shadow">{img.caption}</p>
+                  <p className="text-white text-base font-semibold drop-shadow">
+                    {img.caption}
+                  </p>
                 </div>
                 <div className="absolute inset-0 bg-black/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </div>

@@ -51,31 +51,38 @@ function StarRating({ count }) {
 export default function Customers() {
   return (
     <section id="customers" className="w-full bg-gray-50 py-16 px-0">
-      <div className="max-w-5xl mx-auto px-4">
-        <h2 className="text-3xl md:text-4xl font-bold text-blue-700 mb-10 text-center">
-          Our Happy Customers
-        </h2>
+  <div className="max-w-5xl mx-auto px-4">
+    <h2 className="text-3xl md:text-4xl font-bold text-blue-700 mb-10 text-center">
+      Our Happy Customers
+    </h2>
 
-        {/* Reviews Section */}
-        <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
-          {customers.map((customer, idx) => (
-            <div
-              key={idx}
-              className="bg-white rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 p-8 text-center flex flex-col items-center"
-            >
-              {/* Optionally show image */}
-              {/* <img
-                src={customer.image}
-                alt={customer.name}
-                className="w-20 h-20 rounded-full object-cover mb-4 border-4 border-blue-200 shadow"
-              /> */}
-              <StarRating count={customer.rating} />
-              <p className="text-gray-700 italic mb-4">"{customer.review}"</p>
-              <h3 className="text-lg font-semibold text-blue-700">{customer.name}</h3>
-            </div>
-          ))}
+    {/* Reviews Section */}
+    <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+      {customers.map((customer, idx) => (
+        <div
+          key={idx}
+          className="bg-white rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 p-8 text-center flex flex-col items-center"
+        >
+          <StarRating count={customer.rating} />
+          <p className="text-gray-700 italic mb-4">"{customer.review}"</p>
+          <h3 className="text-lg font-semibold text-blue-700">{customer.name}</h3>
         </div>
-      </div>
-    </section>
+      ))}
+    </div>
+
+    {/* Button container outside the grid */}
+    <div className="flex justify-center mt-10">
+      <a
+        href="https://g.co/kgs/8rX1Nix"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="inline-block bg-blue-700 text-white font-semibold px-6 py-3 rounded-full shadow hover:bg-yellow-400 hover:text-black transition duration-300"
+      >
+        View More
+      </a>
+    </div>
+  </div>
+</section>
+
   );
 }

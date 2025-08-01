@@ -10,7 +10,7 @@ export default function Founder() {
   className="w-40 h-40 rounded-full object-cover object-top transform scale-125 border-4 border-blue-500 shadow-lg mb-6"
 />
 
-        <h2 className="text-3xl md:text-4xl font-bold text-blue-700 mb-2">Susheel Naidu</h2>
+        <h2 className="text-3xl md:text-4xl font-bold text-blue-700 mb-2">Susheel Naidu.s</h2>
         <h3 className="text-lg text-blue-500 mb-4 font-semibold">Founder & CEO, Ekaksha Eventers</h3>
         <p className="text-gray-700 text-lg mb-4">
           Susheel Naidu is the visionary founder of <strong>Ekaksha Eventers</strong>, bringing over a decade of experience in the event management industry. His passion for creativity, meticulous attention to detail, and commitment to client satisfaction have made Ekaksha Eventers a trusted name for unforgettable events.
