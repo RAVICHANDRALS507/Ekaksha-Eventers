@@ -96,12 +96,12 @@ const Footer = () => {
         <p className="text-xs">
           Designed and Developed by{" "}
           <a
-            href="https://faunigent.com"
+            href="https://ravichandrals507.github.io/Portfolio/"
             target="_blank"
             rel="noopener noreferrer"
             className="hover:underline"
           >
-            Faunigent Innovations
+            RAVICHANDRA L S
           </a>
         </p>{" "}
         {/* Reduced text-sm to text-xs */}

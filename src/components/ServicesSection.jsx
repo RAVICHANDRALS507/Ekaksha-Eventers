@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 
 import img1 from "../assets/51.jpg";
 import img2 from "../assets/126.jpg";
@@ -189,7 +189,7 @@ export default function Services() {
           <h2 className="text-3xl md:text-4xl font-bold text-blue-700 mb-10 text-center">
             Our Event Gallery
           </h2>
-          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {images.map((img, idx) => (
               <div
                 key={idx}
@@ -212,13 +212,12 @@ export default function Services() {
           </div>
           <div className="mt-10 text-center">
             <Link
-  to="/gallery"
-  aria-label="View more services on Gallery page"
-  className="inline-block bg-blue-700 text-white font-semibold px-6 py-3 rounded-full shadow hover:bg-yellow-400 hover:text-black transition duration-300"
->
-  View More
-</Link>
-
+              to="/gallery"
+              aria-label="View more services on Gallery page"
+              className="inline-block bg-blue-700 text-white font-semibold px-6 py-3 rounded-full shadow hover:bg-yellow-400 hover:text-black transition duration-300"
+            >
+              View More
+            </Link>
           </div>
         </div>
       </section>

@@ -42,6 +42,12 @@ const AnimatedCounter = ({ endValue, duration = 2000 }) => {
 };
 
 const OurExperience = () => {
+  const stats = [
+    { icon: <FaCalendarAlt className="text-6xl mb-4 text-blue-500 drop-shadow-md" />, count: 1500, label: 'Total Events Completed' },
+    { icon: <FaUserFriends className="text-6xl mb-4 text-pink-500 drop-shadow-md" />, count: 1500, label: 'Happy Customers' },
+    { icon: <FaAward className="text-6xl mb-4 text-green-500 drop-shadow-md" />, count: 6, label: 'Years of Experience' },
+  ];
+
   return (
     <>
       <style>
@@ -64,21 +70,53 @@ const OurExperience = () => {
         </h2>
 
         {/* Experience Stats */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 w-full max-w-6xl mb-24">
-          {[
-            { icon: <FaCalendarAlt className="text-6xl mb-4 text-blue-500 drop-shadow-md" />, count: 1500, label: 'Total Events Completed' },
-            { icon: <FaUserFriends className="text-6xl mb-4 text-pink-500 drop-shadow-md" />, count: 1500, label: 'Happy Customers' },
-            { icon: <FaAward className="text-6xl mb-4 text-green-500 drop-shadow-md" />, count: 6, label: 'Years of Experience' },
-          ].map((item, i) => (
-            <div key={i} className="bg-white bg-opacity-90 backdrop-blur-md border border-gray-200 p-8 rounded-2xl shadow-2xl hover:shadow-yellow-400/30 transform transition duration-300 hover:scale-105 flex flex-col items-center text-center">
-              {item.icon}
-              <p className="text-5xl font-bold mb-2 text-gray-900 leading-none">
-                <AnimatedCounter endValue={item.count} duration={2000} />+
-              </p>
-              <p className="text-lg text-gray-600 font-medium">{item.label}</p>
-            </div>
-          ))}
+        {/* Experience Stats */}
+<div className="w-full max-w-6xl mb-24">
+  {/* Mobile View */}
+  <div className="md:hidden flex flex-col items-center space-y-6">
+    {/* Row with first 2 cards */}
+    <div className="flex justify-center gap-4 w-full">
+      {[0, 1].map((i) => (
+        <div key={i} className="flex-grow basis-1/2 flex justify-center">
+          <div className="w-full max-w-[300px] bg-white bg-opacity-90 backdrop-blur-md border border-gray-200 p-6 rounded-2xl shadow-2xl hover:shadow-yellow-400/30 transition duration-300 hover:scale-105 flex flex-col items-center text-center">
+            {stats[i].icon}
+            <p className="text-4xl font-bold mb-2 text-gray-900 leading-none">
+              <AnimatedCounter endValue={stats[i].count} duration={2000} />+
+            </p>
+            <p className="text-base text-gray-600 font-medium">{stats[i].label}</p>
+          </div>
         </div>
+      ))}
+    </div>
+
+    {/* Third card centered below */}
+    <div className="w-full flex justify-center">
+      <div className="w-full max-w-[300px]">
+        <div className="bg-white bg-opacity-90 backdrop-blur-md border border-gray-200 p-6 rounded-2xl shadow-2xl hover:shadow-yellow-400/30 transition duration-300 hover:scale-105 flex flex-col items-center text-center">
+          {stats[2].icon}
+          <p className="text-4xl font-bold mb-2 text-gray-900 leading-none">
+            <AnimatedCounter endValue={stats[2].count} duration={2000} />+
+          </p>
+          <p className="text-base text-gray-600 font-medium">{stats[2].label}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  {/* Desktop Grid View */}
+  <div className="hidden md:grid grid-cols-3 gap-10">
+    {stats.map((item, i) => (
+      <div key={i} className="bg-white bg-opacity-90 backdrop-blur-md border border-gray-200 p-8 rounded-2xl shadow-2xl hover:shadow-yellow-400/30 transform transition duration-300 hover:scale-105 flex flex-col items-center text-center">
+        {item.icon}
+        <p className="text-5xl font-bold mb-2 text-gray-900 leading-none">
+          <AnimatedCounter endValue={item.count} duration={2000} />+
+        </p>
+        <p className="text-lg text-gray-600 font-medium">{item.label}</p>
+      </div>
+    ))}
+  </div>
+</div>
+
 
         {/* Package Section */}
         <div className="relative w-full max-w-5xl bg-white rounded-3xl shadow-2xl p-6 sm:p-10 pt-16 md:pt-20 pb-12 sm:pr-10 pr-6">
