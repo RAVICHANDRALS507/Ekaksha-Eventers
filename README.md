@@ -1,12 +1,33 @@
-# React + Vite
+# Ekaksha Eventers - Event Management Company Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Welcome to the **Ekaksha Eventers** project! This is a modern, responsive React-based website created to showcase the services and offerings of Ekaksha Eventers, a creative event management company specializing in corporate events, weddings, private parties, and cultural functions.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Project Overview
 
-## Expanding the ESLint configuration
+Ekaksha Eventers focuses on delivering memorable and flawlessly coordinated events. This website is designed to highlight their brand, service offerings, and upcoming promotions, including a marquee for festival offers.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## Features
+
+- **Hero Section:** Eye-catching introduction with a marquee announcement for upcoming offers.
+- **Responsive Design:** Mobile-friendly layout using Tailwind CSS.
+- **Service Links:** Clear call-to-action button directing users to service sections.
+- **Custom Animations:** Smooth marquee text animation for announcements.
+- **Clean and Modern UI:** Focus on user experience and readability.
+
+---
+
+
+If you want, I can also help you draft a brief description for each screenshot! Just share the images or the sections you want to showcase.
+
+
+## Technologies Used
+
+- React.js
+- Tailwind CSS for styling
+- CSS animations for marquee effect
+- JavaScript (ES6+)
+
