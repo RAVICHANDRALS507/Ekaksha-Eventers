@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://ravichandrals507.github.io/Ekaksha-Eventers/sitemap.xml
