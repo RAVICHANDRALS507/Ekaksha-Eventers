@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import NammaNavbar from './Navbar';
 
 const Gallery = () => {
-  const images = Array.from({ length: 127 }, (_, i) => i + 1);
+  const images = Array.from({ length: 128 }, (_, i) => i + 1);
   const [columns, setColumns] = useState(getColumns());
   const [popupIndex, setPopupIndex] = useState(null); // null means no popup
 

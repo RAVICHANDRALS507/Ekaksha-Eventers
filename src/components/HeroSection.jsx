@@ -42,7 +42,7 @@ const HeroSection = () => {
         {/* Marquee */}
         <div className="marquee-container">
           <div className="marquee-text">
-            🎉 Offer is coming soon for GANESH FESTIVAL! Stay tuned for Exclusive Deals 🎉! 🙏
+            🎉 "20% OFF" on all orders for GANESH FESTIVAL! Stay tuned for Exclusive Deals 🎉! 🙏
           </div>
         </div>
 

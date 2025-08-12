@@ -85,7 +85,7 @@ const NammaNavbar = () => {
               <button
                 key={item.name}
                 onClick={() => handleMenuClick(item)}
-                className="text-white text-lg font-medium transition duration-300 hover:text-namma-dark-yellow"
+                className="cursor-pointer text-white text-lg font-medium transition duration-300 hover:text-namma-dark-yellow"
               >
                 {item.name}
               </button>
@@ -156,7 +156,7 @@ const NammaNavbar = () => {
               <button
                 key={item.name}
                 onClick={() => handleMenuClick(item)}
-                className="block text-white font-medium"
+                className="block cursor-pointer text-white font-medium"
               >
                 {item.name}
               </button>
@@ -199,9 +199,9 @@ const NammaNavbar = () => {
               </a>
             </div>
 
-            <button className="mt-4 w-full bg-namma-yellow text-white py-2 rounded-full font-bold hover:bg-namma-dark-yellow transition duration-300">
+            {/* <button className="mt-4 w-full bg-namma-yellow text-white py-2 rounded-full font-bold hover:bg-namma-dark-yellow transition duration-300">
               Book a Trip
-            </button>
+            </button> */}
           </div>
         </div>
       </nav>
